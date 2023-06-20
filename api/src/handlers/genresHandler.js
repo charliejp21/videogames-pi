@@ -1,10 +1,12 @@
-const {getGenresDb} = require; 
+const {getGenresDb} = require('../controllers/getGenres'); 
 
 const getGenresHandler = async(_req, res) => {
 
     try {
 
-        res.send(await getGenresDb());
+        const findDataDb = await getGenresDb()
+
+        res.status(200).json(findDataDb);
         
     } catch (error) {
 

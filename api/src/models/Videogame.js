@@ -21,14 +21,8 @@ module.exports = (sequelize) => {
     },
     descripcion: {
 
-      type: DataTypes.TEXT,
-      allowNull: true,
-
-    },
-    plataformas: {
-
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
 
     },
     imagen: {

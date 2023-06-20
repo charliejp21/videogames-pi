@@ -1,5 +1,5 @@
 const {Genre} = require("../db");
-const getAllVg = require("./getAllVg")
+const {getAllVg} = require("./getAllVg")
 
 const getGenresApi = async() => {
 
@@ -9,15 +9,7 @@ const getGenresApi = async() => {
 
     const allGenres = [];
 
-    genresApi.forEach(
-
-        (x) => x.forEach(
-            
-            (y) => allGenres.push(y)
-        
-        )
-    
-    );
+    genresApi.forEach((x) => allGenres.push(x));
 
     return [...new Set(allGenres)]
 
@@ -25,11 +17,11 @@ const getGenresApi = async() => {
 
 const getGenresDb = async() => {
 
-    const allGenres = await Genres.findAll();
+    const allGenres = await Genre.findAll();
 
     const genresAllArray = [];
 
-    allGenres.forEach((x) => genresAllArray.push({id: x.id, name: x.name}));
+    allGenres.forEach((x) => genresAllArray.push({id: x.id, nombre: x.nombre}));
 
     return genresAllArray;
 
@@ -47,9 +39,11 @@ const postGenres = async() => {
 
         const genresTypes = await getGenresApi();
 
-        let allGenresTypes = genresTypes.map((genre) => 
-        
-        Genre.findOrCreate({where: {name: genre}}));
+        let allGenresTypes = genresTypes.map((genre) =>
+
+            genre.map(element => Genre.findOrCreate({where: {nombre: element}}))
+    
+        );
 
         Promise.all(allGenresTypes).then((element) => console.log("Generos cargados"));
 

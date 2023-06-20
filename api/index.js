@@ -20,10 +20,17 @@
 
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
+const {postGenres} = require("./src/controllers/getGenres.js")
 
 // Syncing all the models at once.
-conn.sync({ force: false }).then(() => {
+conn.sync({ force: false }).then(async () => {
+
+  await postGenres();
+
   server.listen(3001, () => {
+
     console.log('%s listening at 3001'); // eslint-disable-line no-console
+    
   });
+  
 });

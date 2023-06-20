@@ -9,14 +9,14 @@ module.exports = (sequelize) => {
     id: {
 
       type: DataTypes.INTEGER,
-      allowNull: false,
       primaryKey: true,
+      autoIncrement: true
 
     },
-    genre: {
+    nombre: {
 
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
 
     }
 

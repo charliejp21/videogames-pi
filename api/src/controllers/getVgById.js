@@ -1,6 +1,6 @@
 require('dotenv').config();
 const {KEY} = process.env;
-const {Videogame, Genre} = require('../db')
+const {Videogame, Genre, Platform} = require('../db')
 const axios = require('axios')
 const getVgById = async(id, source) => {
 
@@ -17,18 +17,18 @@ const getVgById = async(id, source) => {
                     id: videogame.id,
                     nombre: videogame.name,
                     descripcion: videogame.description ? videogame.description : "" ,
-                    plataformas: videogame.platforms.map((y) => y.platform.name),
+                    plataformas: videogame.platforms ? videogame.platforms.map((y) => y.platform.name) : [],
                     imagen: videogame.background_image,
                     fecha: videogame.released,
                     rating: videogame.rating,
-                    genres: videogame.genres.map((y) => y.name),
-                    stores: videogame.stores.map((y) => {
+                    genres: videogame.genres ? videogame.genres.map((y) => y.name) : [],
+                    stores: videogame.stores ? videogame.stores.map((y) => {
                         return{
                             id: y.store.id,
                             store: y.store.name,
                             link: y.store.domain
                         }
-                    })
+                    }) : []
 
                 }
 
@@ -44,16 +44,36 @@ const getVgById = async(id, source) => {
 
         const dataDb = await Videogame.findByPk(id, {
 
-            include: {
+            include:[
 
-                model: Genre,
-                attributes: ["genre"]
-            }
+                {
+                    model: Genre,
+                    attributes: ["nombre"],
+                    as: "genres"
+                },{
+                    model: Platform, 
+                    attributes: ["nombre"],
+                    as: "plataformas"
+                }
+            ]
         })
 
         if(dataDb){
 
-            return dataDb;
+            let videogame = {
+
+                id: dataDb.id,
+                nombre: dataDb.nombre,
+                descripcion: dataDb.descripcion ? dataDb.descripcion : "" ,
+                plataformas: dataDb.plataformas.map((y) => y.nombre),
+                imagen: dataDb.imagen,
+                fecha: dataDb.fecha,
+                rating: dataDb.rating,
+                genres: dataDb.genres.map((y) => y.nombre)
+
+            }
+
+            return videogame;
 
         }else{
 

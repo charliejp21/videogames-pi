@@ -1,39 +1,44 @@
 require('dotenv').config();
 const{KEY} = process.env;
 const axios = require('axios');
-const{Videogame, Genre} = require('../db')
+const{Videogame, Genre, Platform} = require('../db')
 const { Op } = require('sequelize');
 
 const getAllVg = async() => {
 
-    const allVideoGames = await Videogame.findAll({
+    const allVideoGamesDb = await Videogame.findAll({
 
-        attributes: ["id","nombre","descripcion","plataformas", "imagen", "fecha", "rating", "created"], 
-        
-        include: {
+        include:[
 
-            model: Genre,
-            attributes: ["genre"]
-
-          }
+            {
+                model: Genre,
+                attributes: ["nombre"],
+                as: "genres"
+            },{
+                model: Platform, 
+                attributes: ["nombre"],
+                as: "plataformas"
+            }
+        ]
 
     });
 
-    const dataDb = await allVideoGames.map((videogame) => {
+    let dataDb = allVideoGamesDb.map((videogame) => {
 
         return{
 
-            id: videogame.id,
-            nombre: videogame.nombre,
-            descripcion: videogame.descripcion,
-            plataformas: videogame.plataformas,
-            imagen: videogame.imagen,
-            fecha: videogame.fecha,
-            rating: videogame.rating
+                id: videogame.id,
+                nombre: videogame.nombre,
+                descripcion: videogame.descripcion ? videogame.descripcion : "" ,
+                plataformas: videogame.plataformas.map((y) => y.nombre),
+                imagen: videogame.imagen,
+                fecha: videogame.fecha,
+                rating: videogame.rating,
+                genres: videogame.genres.map((y) => y.nombre)
 
         }
-
     })
+
 
     try {
 
@@ -58,11 +63,11 @@ const getAllVg = async() => {
                 id: videogame.id,
                 nombre: videogame.name,
                 descripcion: videogame.description ? videogame.description : "" ,
-                plataformas: videogame.platforms.map((y) => y.platform.name),
+                plataformas: videogame.platforms ? videogame.platforms.map((y) => y.platform.name): [],
                 imagen: videogame.background_image,
                 fecha: videogame.released,
                 rating: videogame.rating,
-                genres: videogame.genres.map((y) => y.name)
+                genres: videogame.genres ? videogame.genres.map((y) => y.name): []
     
             }
         
@@ -97,14 +102,36 @@ const getVgByNameDB = async(name) => {
                 }
 
             }, 
-            include: {
+            include:[
 
-                model: Genre
-
-            }
+                {
+                    model: Genre,
+                    attributes: ["nombre"],
+                    as: "genres"
+                },{
+                    model: Platform, 
+                    attributes: ["nombre"],
+                    as: "plataformas"
+                }
+            ]
 
         })
 
+        const dataDb = findDb.map((videogame) => {
+
+            return{
+    
+                    id: videogame.id,
+                    nombre: videogame.nombre,
+                    descripcion: videogame.descripcion ? videogame.descripcion : "" ,
+                    plataformas: videogame.plataformas.map((y) => y.nombre),
+                    imagen: videogame.imagen,
+                    fecha: videogame.fecha,
+                    rating: videogame.rating,
+                    genres: videogame.genres.map((y) => y.nombre)
+    
+            }
+        })
         const findApi = await axios.get(`https://api.rawg.io/api/games?search=${name}&key=${KEY}`)
 
         const infoApi = findApi.data;
@@ -116,19 +143,25 @@ const getVgByNameDB = async(name) => {
                 id: videogame.id,
                 nombre: videogame.name,
                 descripcion: videogame.description ? videogame.description : "" ,
-                plataformas: videogame.platforms.map((y) => y.platform.name),
+                plataformas: videogame.platforms ? videogame.platforms.map((y) => y.platform.name) : [],
                 imagen: videogame.background_image,
                 fecha: videogame.released,
                 rating: videogame.rating,
-                genres: videogame.genres.map((y) => y.name)
+                genres: videogame.genres ? videogame.genres.map((y) => y.name) : []
     
             }
 
         })
 
-        const data = [...findDb, ...infoApiMap]
+        if(!dataDb.length && !infoApiMap.length){
+
+            throw new Error("No hay resultados para tu búsqueda")
+        }
+
+        const data = [...dataDb, ...infoApiMap]
 
         return data;
     }
 }
+
 module.exports = {getAllVg, getVgByNameDB};
