@@ -1,0 +1,134 @@
+.inputSearch{
+    padding: 8px;
+    margin-top: -1.5px !important;
+    border: none;
+    margin-left: 0.5%;
+    font-size: 17px;
+    background-color: #48a8a1;
+    max-width: 30%;
+    color: #4b0082;
+    font-family: Inter;
+    font-variant-caps: small-caps;
+    box-shadow: 0px 0px 5px 1px #48a8a1;
+
+}
+
+/* Boton */
+.btn76,
+.btn76 *,
+.btn76 :after,
+.btn76 :before,
+.btn76:after,
+.btn76:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn76 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #48a8a1;
+  background-image: none;
+  color: #4b0082;
+  cursor: pointer;
+  font-family:Inter;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: auto;
+  margin-right: 10%;
+  margin-top: 0.60%;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn76:disabled {
+  cursor: default;
+}
+.btn76:-moz-focusring {
+  outline: auto;
+}
+.btn76 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn76 [hidden] {
+  display: none;
+}
+.btn76 {
+  --neon: #48a8a1;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 640;
+  -webkit-mask-image: none;
+  outline: 4px solid #4b0082;
+  outline-offset: -4px;
+  overflow: hidden;
+  padding: 0.2rem 1.4rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s;
+}
+.btn76:hover {
+  background: var(--neon);
+  box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+    0 0 100px var(--neon);
+  color: #fff;
+  outline-color: transparent;
+  transition: 0.2s linear 0.6s;
+}
+.btn76 span {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+.btn76 a{
+  color: #4b0082;
+  text-decoration: none;
+
+}
+.btn76:hover a {
+  color: #fff;
+  transition: 0.2s linear 0.6s;
+}
+.btn76 .top {
+  border-top: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .top {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+.btn76 .right {
+  border-right: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .right {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.2s;
+}
+.btn76 .bottom {
+  border-bottom: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .bottom {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.4s;
+}
+.btn76 .left {
+  border-left: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .left {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.6s;
+}

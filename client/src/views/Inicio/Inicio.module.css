@@ -1,0 +1,186 @@
+.cssGuiTxrzcj{
+    -webkit-box-pack:end;
+    -ms-flex-pack:end;
+    -webkit-justify-content:end;
+    justify-content:center;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
+    background:url("https://media.rawg.io/media/resize/1920/-/screenshots/b7d/b7d5a19d3fd05fbae7ddab196b107b92.jpg") 50% 50%/cover no-repeat local padding-box border-box;
+    -webkit-align-items:start;
+    -webkit-box-align:start;
+    -ms-flex-align:start;
+    align-items:start;
+    min-height:640px;
+    max-height:100vh;
+    padding:64px;
+    display:-webkit-box;
+    display:-webkit-flex;display:-ms-flexbox;
+    display:flex;
+
+}
+
+@media screen and (min-width: 40em){
+
+    .cssGuiTxrzcj{
+        
+        min-height:770px;
+    
+    }
+
+}
+    
+.cssGuiI06hl{
+
+    color:#4b0082;
+    margin:0px;
+    text-align:left;
+    font-weight:400;
+    border-radius:0px;
+
+}
+
+.cssGuiA1qoh1oc{
+    color:#4b0082;
+    margin:0 0 32px 0;
+    font-size:2rem;
+    text-align:left;
+    font-family:Inter;
+    line-height:1;
+    font-variation-settings:'wght' 900;
+}
+
+@media screen and (min-width: 40em){
+
+    .cssGuiA1qoh1oc{
+
+        font-size:3rem;
+
+    }
+
+}@media screen and (min-width: 52em){
+
+    .cssGuiA1qoh1oc{
+
+        font-size:6rem;
+        
+    }
+
+}
+/* Boton */
+.btn76,
+.btn76 *,
+.btn76 :after,
+.btn76 :before,
+.btn76:after,
+.btn76:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn76 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #48a8a1;
+  background-image: none;
+  color: #4b0082;
+  cursor: pointer;
+  font-family:Inter;
+  font-size: 100%;
+  line-height: 1.5;
+  margin: 0;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+}
+.btn76:disabled {
+  cursor: default;
+}
+.btn76:-moz-focusring {
+  outline: auto;
+}
+.btn76 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn76 [hidden] {
+  display: none;
+}
+.btn76 {
+  --neon: #48a8a1;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  outline: 4px solid #4b0082;
+  outline-offset: -4px;
+  overflow: hidden;
+  padding: 1.2rem 3rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s;
+}
+.btn76:hover {
+  background: var(--neon);
+  box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+    0 0 100px var(--neon);
+  color: #fff;
+  outline-color: transparent;
+  transition: 0.2s linear 0.6s;
+}
+.btn76 span {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+.btn76 a{
+  color: #4b0082;
+  text-decoration: none;
+
+}
+.btn76:hover a {
+  color: #fff;
+  transition: 0.2s linear 0.6s;
+}
+.btn76 .top {
+  border-top: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .top {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+.btn76 .right {
+  border-right: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .right {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.2s;
+}
+.btn76 .bottom {
+  border-bottom: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .bottom {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.4s;
+}
+.btn76 .left {
+  border-left: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .left {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.6s;
+}
