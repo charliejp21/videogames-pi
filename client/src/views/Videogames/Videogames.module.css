@@ -19,6 +19,13 @@
     position: fixed;
     z-index: 5;
     height: 100vh;
+    text-align: left;
+
+}
+.divContainer > .sideContainer > h3{
+    
+    font-size: 0.7rem;
+    text-align: left;
 
 }
 
@@ -26,18 +33,13 @@
 
     background: #4b0082;
     margin: auto;
-    height: auto;
-    max-height: auto;
-    margin-top: 45px;
-    padding-top: 0.2%;
+    padding-top: 3.2%;
     width: 100%;
+
 }
 
-.subtitleImg{
-    margin: auto;
-}
-
-.divContainer > .vGContainer > .vGCards {
+.vGContainer > .vGCards {
+    
     margin: 0.3%;
     margin-left: 22% !important;
     margin: auto;
@@ -45,6 +47,6 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: 32.5% 32.5% 32.5%;
-
+    grid-auto-rows: minmax(17%, auto);
 
 }

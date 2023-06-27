@@ -14,7 +14,7 @@ export default function SearchBar(){
 
     const handleChangeSearch = (event) => {
 
-        const property = event.target.name; 
+        const property = event.target.name;
 
         const value = event.target.value;
 
@@ -35,11 +35,11 @@ export default function SearchBar(){
             <input type="text" value={search.nombre} name="nombre" onChange={handleChangeSearch} className={style.inputSearch}/>
             
             <button className={style.btn76}>
-            <a href="/videogames">BUSCAR
+             BUSCAR
                 <span className={style.top}></span>
                 <span className={style.right}></span>
                 <span className={style.bottom}></span>
-                <span className={style.left}></span></a>
+                <span className={style.left}></span>
             </button>
 
 

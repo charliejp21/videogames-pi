@@ -31,9 +31,9 @@ const VideogamesContainer = () => {
 
             <div className={style.sideContainer}>
 
-                <h1 className={style.bienvenido}>BIENVENIDO</h1> 
+                <h1 className={style.bienvenido}>Bienvenido</h1> 
 
-                <h2 className={style.subtitle}>Filtra, ordena o crea una nuevo videojuego</h2>
+                <h3>Se muestran 10 resultados por paǵina</h3>
                 
             </div>
 
@@ -61,12 +61,13 @@ const VideogamesContainer = () => {
                             
                             ))
 
-                        ) : (
+                        ) : (<>
 
+                            <br/>    
                             <h2 className={style.subtitleImg}><img src={wait} alt="waiting" height= '130px'/></h2>
                             
                         
-                        )}
+                        </>)}
 
                     </div>
 

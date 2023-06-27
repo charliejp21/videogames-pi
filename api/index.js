@@ -21,11 +21,14 @@
 const server = require('./src/app.js');
 const { conn } = require('./src/db.js');
 const {postGenres} = require("./src/controllers/getGenres.js")
+const {postPlatforms} = require("./src/controllers/getPlataformas.js")
 
 // Syncing all the models at once.
 conn.sync({ force: false }).then(async () => {
 
   await postGenres();
+
+  await postPlatforms();
 
   server.listen(3001, () => {
 

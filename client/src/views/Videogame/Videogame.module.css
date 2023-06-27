@@ -1,0 +1,237 @@
+ .cssGui17nf7a5{
+
+    -webkit-box-pack:justify;-webkit-justify-content:space-between;justify-content:space-between;
+    -webkit-flex-direction:row;
+    -ms-flex-direction:row;
+    flex-direction:row;
+    border-bottom:0px none #000000;
+    -webkit-align-items:center;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    color: #4b0082;
+    font-weight: bold;
+    font-family: Inter;
+
+}
+ a{
+  color: white;
+ } 
+  .cssGui15k88vv{
+    width:50%;
+    height:100%;
+    display:-webkit-box;
+    display:-webkit-flex;
+    display:-ms-flexbox;
+    display:flex;
+    padding:64px;
+    -webkit-align-items:center;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    -webkit-flex-direction:column;
+    -ms-flex-direction:column;
+    flex-direction:column;
+}
+  .cssGui1yo4sjo{
+    margin:0px;
+    text-align:left;
+    font-weight:400;
+    text-transform:uppercase;
+}
+  .cssGuiC08p3s{
+    margin:0px;
+    font-size:2rem;
+    text-align:center;
+    font-weight:bold;
+}
+
+.cssGui7g9l4j{
+background-color:#4b0082;
+-webkit-box-pack:justify;
+-webkit-justify-content:space-between;
+justify-content:space-between;
+-webkit-flex-direction:row;
+-ms-flex-direction:row;
+flex-direction:row;
+border-bottom:0px none #000000;
+-webkit-transition:all 350ms 0ms cubic-bezier(0, 0, 1, 1);
+transition:all 350ms 0ms cubic-bezier(0, 0, 1, 1);
+-webkit-align-items:center;-webkit-box-align:center;
+-ms-flex-align:center;align-items:center;display:-webkit-box;
+display:-webkit-flex;display:-ms-flexbox;display:flex;
+color:#48a8a1;
+}
+.cssGuiJxv34t{
+  border-radius:0px;
+  -webkit-align-items:center;
+  -webkit-box-align:center;
+  -ms-flex-align:center;
+  align-items:center;
+  max-width:96rem;
+  padding:32px;
+  display:-webkit-box;
+  display:-webkit-flex;
+  display:-ms-flexbox;
+  display:flex;
+  margin:0px auto 0px auto;
+}
+.cssGuiC76o7d{
+  border-radius:0px;
+  display:block;
+  width:45% !important;
+}
+@media screen and (min-width: 40em){.cssGuiC76o7d{width:50%;}}@media screen and (min-width: 52em){.cssGuiC76o7d{width:50%;}}
+.cssGuiHa9zqb{
+
+  padding:64px;
+  height:100%;
+  width:100%;
+}
+@media screen and (min-width: 40em){.cssGuiHa9zqb{width:50%;}}@media screen and (min-width: 52em){.cssGuiHa9zqb{width:50%;}}
+.cssGui191l504{
+  text-transform:uppercase;
+  font-weight:400;
+  text-align:left;
+  font-size:0.75rem;
+  margin:0 0 8px 0;
+  color:overlay-shadow.6;
+}
+.cssGuiWom882{
+  line-height:1;
+  font-weight:900;
+  text-align:start;
+  font-size:2rem;
+  margin:0px;
+}
+.cssGui13vv9mx{
+
+  text-align:left;
+  margin:8px 0 16px 0;
+}
+.cssGui1gtdkx7{
+ max-width:80ch;margin:0 0 0 0;
+ text-align: left;
+}
+.cssGui1jkxhk1{
+  text-decoration-line:none;
+  border-radius:0px;
+  -webkit-transition:all 350ms 0ms cubic-bezier(0, 0, 1, 1);
+  transition:all 350ms 0ms cubic-bezier(0, 0, 1, 1);
+  margin-top:32px;
+  box-shadow:inset currentcolor 0px 0px 0px 2px;
+  padding:16px 32px 16px 32px;display:-webkit-inline-box;display:-webkit-inline-flex;display:-ms-inline-flexbox;display:inline-flex;color:currentcolor;
+}
+.cssGui1jkxhk1:hover{
+  color:#725fff;
+}
+.cssGui11fs50h{
+  text-decoration-line:none;
+}
+
+.genresMap{
+
+  text-align: left;
+  display: flex;
+  margin-top: -25px;
+
+}
+.genresMap > p{
+
+  margin: auto;
+  margin-left: 2%;
+  margin-right: 1%;
+
+}
+
+.cssGui7g9l4j2{
+
+  background-color:#4b0082;
+  align-items:left;
+  color:#48a8a1;
+  display:flex;
+  margin: auto;
+
+}
+
+.infoAdicional{
+
+    height: 10% !important;
+}
+
+.infoAdicional svg{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70vh;
+  background-color: #48a8a1;
+
+}
+
+.cssGuiJxv34t2{
+  padding: 5%;
+  display: flex;
+  color: #ffffff;
+  width: 100%;
+  margin: auto;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: -35%;
+  text-transform: uppercase;
+
+}
+
+.cssGuiHa9zqb2{
+
+  width:100%;
+  
+}
+
+.plataformasMap{
+
+  margin: auto;
+  width: 100%;
+
+}
+.plataformasMap p{
+
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.storesMap{
+
+  margin: auto;
+  width: 100%;
+
+}
+.storesMap p{
+
+  font-size: 1.1em;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+
+}
+
+.developersMap{
+
+  text-align: left;
+  display: flex;
+  margin-top: -5px;
+
+}
+.developersMap > p{
+
+  margin: auto;
+  margin-left: 2%;
+  margin-right: 1%;
+
+}

@@ -16,7 +16,7 @@ const getVgById = async(id, source) => {
 
                     id: videogame.id,
                     nombre: videogame.name,
-                    descripcion: videogame.description ? videogame.description : "" ,
+                    descripcion: videogame.description_raw ? videogame.description_raw : "" ,
                     plataformas: videogame.platforms ? videogame.platforms.map((y) => y.platform.name) : [],
                     imagen: videogame.background_image,
                     fecha: videogame.released,
@@ -28,7 +28,10 @@ const getVgById = async(id, source) => {
                             store: y.store.name,
                             link: y.store.domain
                         }
-                    }) : []
+                    }) : [],
+                    website: videogame.website ? videogame.website : "",
+                    esrb_rating: videogame.esrb_rating ? videogame.esrb_rating : "",
+                    developers: videogame.developers ? videogame.developers.map((y) => y.name) : []
 
                 }
 

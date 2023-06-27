@@ -6,7 +6,7 @@ const Nav = () => {
 return (
         <div className={style.topnav}>
 
-            <a href="/videojuegos">Videojuegos</a>
+            <a href="/videogames">Videojuegos</a>
 
             <a href="/crear-videojuego">Crear videojuego</a>
 

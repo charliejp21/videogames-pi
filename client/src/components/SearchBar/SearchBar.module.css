@@ -1,6 +1,6 @@
 .inputSearch{
     padding: 8px;
-    margin-top: -1.5px !important;
+    margin-top: 1.5px !important;
     border: none;
     margin-left: 0.5%;
     font-size: 17px;
@@ -35,7 +35,7 @@
   line-height: 1.5;
   margin: auto;
   margin-right: 10%;
-  margin-top: 0.60%;
+  margin-top: 0.40%;
   -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
   padding: 0;
 }
@@ -61,7 +61,7 @@
   outline: 4px solid #4b0082;
   outline-offset: -4px;
   overflow: hidden;
-  padding: 0.2rem 1.4rem;
+  padding: 0.4rem 1.5rem;
   position: relative;
   text-transform: uppercase;
   transition: 0.2s linear 0.1s;
