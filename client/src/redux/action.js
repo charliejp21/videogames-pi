@@ -1,5 +1,5 @@
 import axios from "axios";
-import {GET_ALL_PLATAFORMAS, GET_ALL_VIDEOGAMES, GET_VIDEOGAMES_BY_SEARCH, GET_VIDEOGAME_BY_ID, GET_ALL_GENRES, GET_ALL_PLATAFORMAS} from "./action-types"
+import {GET_ALL_VIDEOGAMES, GET_VIDEOGAMES_BY_SEARCH, GET_VIDEOGAME_BY_ID, GET_ALL_GENRES, GET_ALL_PLATAFORMAS} from "./action-types"
 
 export const getAllVideogames = () => async(dispatch) => {
 
@@ -45,7 +45,7 @@ export const getVgById = (id) => async(dispatch) => {
 
 export const getAllGenres = () => async(dispatch) => {
 
-    const apiDataDb = await axios.get(`http://localhost:3001/videogames/genres`)
+    const apiDataDb = await axios.get(`http://localhost:3001/genres`)
 
     const genres = apiDataDb.data;
 
@@ -59,7 +59,7 @@ export const getAllGenres = () => async(dispatch) => {
 
 export const getAllPlataformas = () => async(dispatch) => {
 
-    const apiDataDb = await axios.get(`http://localhost:3001/videogames/plataformas`)
+    const apiDataDb = await axios.get(`http://localhost:3001/plataformas`)
 
     const plataformas = apiDataDb.data;
 
@@ -69,5 +69,25 @@ export const getAllPlataformas = () => async(dispatch) => {
         payload: plataformas
 
     })
+
+}
+
+export const postVg = async(data) => {
+    
+    try {
+
+        const sendData = await axios.post(`http://localhost:3001/videogames/create`, data)
+
+        alert("Videojuego creado exitosamente")
+
+        return sendData.data;
+        
+    } catch (error) {
+
+        alert(`Se ha producido un error: ${error}`)
+
+        throw new Error(error);
+        
+    }
 
 }

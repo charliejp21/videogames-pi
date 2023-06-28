@@ -3,6 +3,7 @@ import Inicio from './views/Inicio/Inicio';
 import SearchResults from './views/SearchResults/SearchResults'
 import VideogamesContainer from './views/Videogames/Videogames'
 import VideogameView from './views/Videogame/Videogame'
+import CreateVideogame from './views/CreateVg/CreateVg'
 import Nav from './components/Nav/Nav'
 import {Route, Routes, useLocation} from 'react-router-dom'
 
@@ -24,6 +25,8 @@ function App() {
         <Route path='/results/:nombre' element={<SearchResults />} />
 
         <Route path='/videogame/:id' element={<VideogameView />} />
+
+        <Route path="/crear/" element={<CreateVideogame />} />
 
       </Routes>
 

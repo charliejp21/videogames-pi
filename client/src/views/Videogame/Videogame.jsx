@@ -22,7 +22,7 @@ const VideogameView = () => {
     return (<>
     
     <header className={style.cssGui17nf7a5} style={{
-        backgroundImage: `linear-gradient(rgba(72, 168, 161, 0.5), rgba(72, 168, 161, 0.5)), url(${videogame.imagen})`,
+        backgroundImage: `linear-gradient(rgba(72, 168, 161, 0.5), rgba(72, 168, 161, 0.5)), url(${videogame.imagen_portada ? videogame.imagen_portada : videogame.imagen})`,
         backgroundSize: 'cover',
         backgroundPosition: 'top',
         backgroundRepeat: 'no-repeat',

@@ -31,7 +31,8 @@ const getVgById = async(id, source) => {
                     }) : [],
                     website: videogame.website ? videogame.website : "",
                     esrb_rating: videogame.esrb_rating ? videogame.esrb_rating : "",
-                    developers: videogame.developers ? videogame.developers.map((y) => y.name) : []
+                    developers: videogame.developers ? videogame.developers.map((y) => y.name) : [],
+                    imagen_portada: videogame.background_image_additional ? videogame.background_image_additional : ""
 
                 }
 

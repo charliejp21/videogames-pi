@@ -8,7 +8,7 @@ return (
 
             <a href="/videogames">Videojuegos</a>
 
-            <a href="/crear-videojuego">Crear videojuego</a>
+            <a href="/crear/">Crear videojuego</a>
 
             <a href="/mis-videojuegos">Videojuegos creados</a>
 
