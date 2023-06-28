@@ -4,6 +4,7 @@ import SearchResults from './views/SearchResults/SearchResults'
 import VideogamesContainer from './views/Videogames/Videogames'
 import VideogameView from './views/Videogame/Videogame'
 import CreateVideogame from './views/CreateVg/CreateVg'
+import CreatedVideogames from './views/CreatedVideogames/CreatedVideogames'
 import Nav from './components/Nav/Nav'
 import {Route, Routes, useLocation} from 'react-router-dom'
 
@@ -27,6 +28,8 @@ function App() {
         <Route path='/videogame/:id' element={<VideogameView />} />
 
         <Route path="/crear/" element={<CreateVideogame />} />
+
+        <Route path="/mis-videojuegos/" element={<CreatedVideogames />}/>
 
       </Routes>
 

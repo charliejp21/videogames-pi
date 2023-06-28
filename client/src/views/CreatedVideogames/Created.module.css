@@ -1,0 +1,197 @@
+.divContainer{
+
+    display: flex;
+    flex-direction: row;
+    font-family: Inter;
+    background: #48a8a1;
+    
+}
+
+
+.divContainer > .sideContainer{
+    
+    margin-top: 45px;
+    width: 20%;
+    background: #48a8a1;
+    color: #4b0082;
+    padding: 0.8%;
+    height: auto;
+    position: fixed;
+    z-index: 5;
+    height: 100vh;
+    text-align: left;
+
+}
+.divContainer > .sideContainer > h3{
+    
+    font-size: 0.7rem;
+    text-align: left;
+
+}
+
+.divContainer > .vGContainer {
+
+    background: #4b0082;
+    margin: auto;
+    padding-top: 3.2%;
+    width: 100%;
+
+}
+
+.vGContainer > .vGCards {
+    margin: 0.3%;
+    margin-left: 22% !important;
+    margin: auto;
+    margin-top: 0.5%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 32.5% 32.5% 32.5%;
+    grid-auto-rows: minmax(15%, auto);
+
+}
+.h1Search{
+    font-size: 3.5em;
+    font-variant-caps:all-small-caps;
+    background-color: #48a8a1;
+    padding: 2.5%;
+    width: 80%;
+    box-shadow: 0px 0px 5px 1px #4b0082;
+    border-radius: 20px;
+    color: rgb(255, 255, 255);
+    margin: auto;
+    margin-top:10%;
+}
+
+
+/* Boton */
+.btn76,
+.btn76 *,
+.btn76 :after,
+.btn76 :before,
+.btn76:after,
+.btn76:before {
+  border: 0 solid;
+  box-sizing: border-box;
+}
+.btn76 {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: button;
+  background-color: #48a8a1;
+  background-image: none;
+  color: #4b0082;
+  cursor: pointer;
+  font-family:Inter;
+  font-size: 100%;
+  line-height: 1.5;
+  margin-top: 5%;
+  -webkit-mask-image: -webkit-radial-gradient(#000, #fff);
+  padding: 0;
+  margin-bottom: 0.5%;
+}
+.btn76:disabled {
+  cursor: default;
+}
+.btn76:-moz-focusring {
+  outline: auto;
+}
+.btn76 svg {
+  display: block;
+  vertical-align: middle;
+}
+.btn76 [hidden] {
+  display: none;
+}
+.btn76 {
+  --neon: #48a8a1;
+  box-sizing: border-box;
+  display: block;
+  font-weight: 900;
+  -webkit-mask-image: none;
+  outline: 4px solid #4b0082;
+  outline-offset: -4px;
+  overflow: hidden;
+  padding: 0.8rem 2.4rem;
+  position: relative;
+  text-transform: uppercase;
+  transition: 0.2s linear 0.1s;
+}
+.btn76:hover {
+  background: var(--neon);
+  box-shadow: 0 0 5px var(--neon), 0 0 25px var(--neon), 0 0 50px var(--neon),
+    0 0 100px var(--neon);
+  color: #fff;
+  outline-color: transparent;
+  transition: 0.2s linear 0.6s;
+}
+.btn76 span {
+  display: block;
+  inset: 0;
+  position: absolute;
+}
+.btn76 a{
+  color: #4b0082;
+  text-decoration: none;
+
+}
+.btn76:hover a {
+  color: #fff;
+  transition: 0.2s linear 0.6s;
+}
+.btn76 .top {
+  border-top: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .top {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear;
+}
+.btn76 .right {
+  border-right: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(-100% + var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .right {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.2s;
+}
+.btn76 .bottom {
+  border-bottom: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateX(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .bottom {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.4s;
+}
+.btn76 .left {
+  border-left: 4px solid var(--neon);
+  opacity: 0;
+  transform: translateY(calc(100% - var(--progress, 0%)));
+  transition: none;
+}
+.btn76:hover .left {
+  --progress: 100%;
+  opacity: 1;
+  transition: transform 0.2s linear 0.6s;
+}
+.deleteVg{
+
+  background-color: #ffffff;
+  padding: 0.5%;
+  width: 15%;
+  color: #48a8a1;
+  font-weight: bold;
+  border: 1px solid #4b0082;
+  margin-bottom: -5px;
+  display: block;
+  margin: auto;
+  border-radius: 10px;
+
+}

@@ -1,6 +1,7 @@
 const {getAllVg, getVgByNameDB} = require('../controllers/getAllVg')
 const postVg = require('../controllers/postVg')
 const getVgById = require('../controllers/getVgById')
+const deleteVg = require('../controllers/deleteVg')
 
 const getVgHandler = async (req, res) => {
 
@@ -88,5 +89,42 @@ const createVgHandler = async(req, res) => {
 
 }
 
+const deleteVgByIdHandler = async(req, res) => {
 
-module.exports = {getVgHandler, getVgByIdHandler, createVgHandler};
+    const {id} = req.params;
+
+    try {
+
+        const borrar = await deleteVg(id);
+
+        if(borrar){
+
+            return res.status(200).send({
+
+                status: "success",
+                videogame: borrar,
+                mensaje: "Videojuego borrado exitosamente"
+            })
+        }
+        
+    } catch (error) {
+
+        return res.status(404).send({
+
+            status: "error",
+            mensaje: "No se encontró el videojuego con el id indicado"
+        })
+        
+    }
+
+    return res.status(500).json({
+
+        status: "error",
+        mensaje: "Error del servidor al buscar"
+
+    })
+
+}
+
+
+module.exports = {getVgHandler, getVgByIdHandler, createVgHandler, deleteVgByIdHandler};

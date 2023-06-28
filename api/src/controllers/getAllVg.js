@@ -34,7 +34,8 @@ const getAllVg = async() => {
                 imagen: videogame.imagen,
                 fecha: videogame.fecha,
                 rating: videogame.rating,
-                genres: videogame.genres.map((y) => y.nombre)
+                genres: videogame.genres.map((y) => y.nombre),
+                created: videogame.created
 
         }
     })

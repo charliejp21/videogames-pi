@@ -91,3 +91,25 @@ export const postVg = async(data) => {
     }
 
 }
+
+export const deleteVg = async(id) => {
+
+    try {
+
+        const deleteVideoGame = await axios.delete(`http://localhost:3001/videogames/id/${id}`)
+
+        alert("Videojuego borrado exitosamente");
+
+        window.location.reload()
+
+        return deleteVideoGame.data;
+        
+    } catch (error) {
+
+        alert(`Se ha producido un error: ${error}`)
+
+        throw new Error(error)
+        
+    }
+
+}
