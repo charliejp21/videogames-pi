@@ -13,9 +13,6 @@ export default function Videogame(props){
                  <img src={star} className={style.starImg}/><p className={style.starP}>{props.rating}</p>
                 </div>
                 <h3 className={style.cssGui1od07ga}>{props.nombre}</h3>
-                <p className={style.cssGuiA5e3nn}>
-                    {props.descripcion}
-                </p>
             </div>
 
             <p className={style.plataformasTitle}>Plataformas disponibles:</p>

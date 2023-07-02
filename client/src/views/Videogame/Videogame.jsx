@@ -64,7 +64,7 @@ const VideogameView = () => {
 
                     return(
 
-                        <p>{genre}</p>
+                        <p className={style.pMapsDetail}>{genre}</p>
 
                     )
                 })}
@@ -80,7 +80,7 @@ const VideogameView = () => {
 
                     return(
 
-                        <p>{developer}</p>
+                        <p className={style.pMapsDetail}>{developer}</p>
 
                     )
                 })}
@@ -147,22 +147,27 @@ const VideogameView = () => {
 
                 </div>
             
-                <div className={style.cssGuiHa9zqb2}>    
-                
-                    <div className={style.storesMap}>
+                <div className={style.cssGuiHa9zqb2}>
 
-                        <h1>Tiendas para comprar:</h1>
-                        {videogame.stores && videogame.stores.map((store) => {
+                    {videogame.stores ? (
 
-                            return(
+                            <div className={style.storesMap}>
 
-                                <p>{store.store}</p>
+                            <h1>Tiendas para comprar:</h1>
+                            {videogame.stores && videogame.stores.map((store) => {
 
-                            )
+                                return(
 
-                        })}
-                        
-                    </div>
+                                    <p>{store.store}</p>
+
+                                )
+
+                            })}
+
+                            </div>
+
+                    ) : ("")}    
+                    
                 </div>
             </div>
 

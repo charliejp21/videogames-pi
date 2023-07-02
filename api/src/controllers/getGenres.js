@@ -7,11 +7,13 @@ const getGenresApi = async() => {
 
     const genresApi = genres.map((vg) => vg.genres);
 
-    const allGenres = [];
+    let allGenres = new Set();
 
-    genresApi.forEach((x) => allGenres.push(x));
+    genresApi.forEach((x) => x.forEach((genre) => allGenres.add(genre)))
 
-    return [...new Set(allGenres)]
+    let arrayGenres = Array.from(allGenres)
+
+    return arrayGenres;
 
 }
 
@@ -39,9 +41,7 @@ const postGenres = async() => {
 
         const genresTypes = await getGenresApi();
 
-        let allGenresTypes = genresTypes.map((genre) =>
-
-            genre.map(element => Genre.findOrCreate({where: {nombre: element}}))
+        let allGenresTypes = genresTypes.map((genre) => Genre.findOrCreate({where: {nombre: genre}})
     
         );
 

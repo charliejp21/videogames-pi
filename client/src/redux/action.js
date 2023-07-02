@@ -1,5 +1,5 @@
 import axios from "axios";
-import {GET_ALL_VIDEOGAMES, GET_VIDEOGAMES_BY_SEARCH, GET_VIDEOGAME_BY_ID, GET_ALL_GENRES, GET_ALL_PLATAFORMAS} from "./action-types"
+import {GET_ALL_VIDEOGAMES, GET_VIDEOGAMES_BY_SEARCH, GET_VIDEOGAME_BY_ID, GET_ALL_GENRES, GET_ALL_PLATAFORMAS, GET_PAGE, SORT, FILTER_VG_CREATED, FILTER_VG_GENRE} from "./action-types"
 
 export const getAllVideogames = () => async(dispatch) => {
 
@@ -112,4 +112,44 @@ export const deleteVg = async(id) => {
         
     }
 
+}
+
+export const getPage = (page) => async(dispatch) =>{ 
+
+    dispatch({
+
+        type: GET_PAGE,
+        payload: page
+    })
+
+}
+
+export const sort = (order) => async(dispatch) => {
+
+    dispatch({
+
+        type: SORT,
+        payload: order,
+
+    })
+}
+
+export const filterGenre = (genre) => async(dispatch) => {
+
+    dispatch({
+
+        type: FILTER_VG_GENRE,
+        payload: genre
+
+    })
+    
+}
+
+export const filterCreated = (created) => async(dispatch) => {
+
+    dispatch({
+
+        type: FILTER_VG_CREATED,
+        payload: created
+    })
 }

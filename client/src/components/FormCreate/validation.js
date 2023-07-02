@@ -85,11 +85,11 @@ const validation = (form, errors, setErrors) => {
 
         } else if(form.rating.length > 4){
 
-            setErrors({...errors, rating:"El rating no puede tener más de 2 decimales"})
+            setErrors({...errors, rating:"El rating puede tener máximo 2 decimales"})
 
         }else if(!/^\d+(\.\d+)?$/.test(form.rating)){
 
-            setErrors({...errors, rating:"El rating con decimales debe tener dos decimales"})
+            setErrors({...errors, rating:"El rating con decimales puede tener máximo dos decimales"})
 
         }
         else{

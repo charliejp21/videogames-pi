@@ -7,11 +7,13 @@ const getPlatformsApi = async() => {
 
     const plataformasApi = videogames.map((vg) => vg.plataformas);
 
-    const allPlatforms = [];
+    let allPlataformas = new Set();
 
-    plataformasApi.forEach((x) => allPlatforms.push(x));
+    plataformasApi.forEach((x) => x.forEach((plataforma) => allPlataformas.add(plataforma)));
 
-    return [... new Set(allPlatforms)]
+    let arrayPlataformas = Array.from(allPlataformas);
+
+    return arrayPlataformas;
 
 }
 
@@ -38,10 +40,10 @@ const postPlatforms = async() => {
 
         const platformsType = await getPlatformsApi();
 
-        let allPlatformsTypes = platformsType.map((platform) => platform.map(element => Platform.findOrCreate({
+        let allPlatformsTypes = platformsType.map((platform) => Platform.findOrCreate({
 
-            where: {nombre: element}
-        })))
+            where: {nombre: platform}
+        }))
 
         Promise.all(allPlatformsTypes).then((element) => console.log(("Plataformas cargadas")))
     }

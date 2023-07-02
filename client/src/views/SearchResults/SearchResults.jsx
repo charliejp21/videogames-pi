@@ -44,15 +44,15 @@ const ResultsContainer = () => {
                         
                 ): videogames.length > 0 ? (<>
                 
-                    <h1 className={style.bienvenido}>{videogames.length} Resultados de búsqueda para: <br/><h3>"{nombre}"</h3></h1> 
+                    <h1 className={style.bienvenido}>{videogames.length} Resultado{videogames.length === 1 ? "" : "s"} de búsqueda para: <br/><h3>"{nombre}"</h3></h1> 
                     <h5>¿No encontraste el videjouego que buscabas?</h5>
                     <h5>Crea una nueva tarjeta y agrégala a la wikigames </h5>
                     <button className={style.btn76}>
-                        <a href={"/crear/"}>CREAR JUEGO</a>
+                        <a href={"/crear/"}>CREAR JUEGO
                         <span className={style.top}></span>
                         <span className={style.right}></span>
                         <span className={style.bottom}></span>
-                        <span className={style.left}></span>
+                        <span className={style.left}></span></a>
                     </button>
                 
                 </>): (<>
@@ -62,11 +62,11 @@ const ResultsContainer = () => {
                         <h5>¿No encontraste el videjouego que buscabas?</h5>
                         <h5>Crea una nueva tarjeta y agrégala a la wikigames </h5>
                         <button className={style.btn76}>
-                            <a href={"/crear/"}>CREAR JUEGO</a>
+                            <a href={"/crear/"}>CREAR JUEGO
                             <span className={style.top}></span>
                             <span className={style.right}></span>
                             <span className={style.bottom}></span>
-                            <span className={style.left}></span>
+                            <span className={style.left}></span></a>
                         </button>
 
                 </> )}

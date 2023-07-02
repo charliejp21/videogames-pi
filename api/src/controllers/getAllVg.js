@@ -47,9 +47,9 @@ const getAllVg = async() => {
 
         let videogamesApi = []; //Me traigo toda la info de las páginas y se guardan en el array
 
-        while(i < 5){
+        while(i < 20){
 
-            const apiData = await axios.get(`https://api.rawg.io/api/games?page=${i}&page_size=5&key=${KEY}`);
+            const apiData = await axios.get(`https://api.rawg.io/api/games?page=${i}&page_size=15&key=${KEY}`);
 
             videogamesApi.push(apiData) // se pushean promesas no el resultado de las promesas y todas estaran péndientes, por eso despues se tiene que usar Promise.all para resolvar cada una
 
@@ -68,7 +68,8 @@ const getAllVg = async() => {
                 imagen: videogame.background_image,
                 fecha: videogame.released,
                 rating: videogame.rating,
-                genres: videogame.genres ? videogame.genres.map((y) => y.name): []
+                genres: videogame.genres ? videogame.genres.map((y) => y.name): [],
+                created: false
     
             }
         

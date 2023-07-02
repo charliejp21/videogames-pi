@@ -221,7 +221,7 @@ const Form = () => {
 
                 <label className={style.cssGui1ds78pt}>
                     <span className={style.cssGui1doevve}>Rating</span>
-                    <p>*Sólo se permite de 1-5 con dos decimales</p>
+                    <p>*Sólo se permite de 1-5 con máximo dos decimales</p>
                     <input type="text"  name="rating" value={form.rating} onChange={changeHandler} className={style.cssGui1a1qsev} />
                     {errors.rating && <span className={style.error}>{errors.rating}</span>}
                 </label>

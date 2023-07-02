@@ -54,12 +54,13 @@
     font-variant-caps:all-small-caps;
     background-color: #48a8a1;
     padding: 2.5%;
-    width: 80%;
+    width: 40%;
     box-shadow: 0px 0px 5px 1px #4b0082;
     border-radius: 20px;
     color: rgb(255, 255, 255);
     margin: auto;
     margin-top:10%;
+    margin-left: 33rem;
 }
 
 

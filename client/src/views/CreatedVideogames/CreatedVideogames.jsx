@@ -57,15 +57,15 @@ const CreatedVideogames = () => {
                         
                 ): videogamesCreated.length > 0 ? (<>
                 
-                    <h1 className={style.bienvenido}>{videogamesCreated.length} Juegos creados</h1> 
+                    <h1 className={style.bienvenido}>{videogamesCreated.length} Juego{videogamesCreated.length === 1 ? "" : "s"} creado{videogamesCreated.length === 1 ? "" : "s"}</h1> 
                     <h5>¿No encontraste el videjouego que buscabas?</h5>
                     <h5>Crea una nueva tarjeta y agrégala a la wikigames </h5>
                     <button className={style.btn76}>
-                        <a href={"/crear/"}>CREAR JUEGO</a>
+                        <a href={"/crear/"}>CREAR JUEGO
                         <span className={style.top}></span>
                         <span className={style.right}></span>
                         <span className={style.bottom}></span>
-                        <span className={style.left}></span>
+                        <span className={style.left}></span></a>
                     </button>
                 
                 </>): (<>
@@ -74,11 +74,11 @@ const CreatedVideogames = () => {
                         <h5>¿No encontraste el videjouego que buscabas?</h5>
                         <h5>Crea una nueva tarjeta y agrégala a la wikigames </h5>
                         <button className={style.btn76}>
-                            <a href={"/crear/"}>CREAR JUEGO</a>
+                            <a href={"/crear/"}>CREAR JUEGO
                             <span className={style.top}></span>
                             <span className={style.right}></span>
                             <span className={style.bottom}></span>
-                            <span className={style.left}></span>
+                            <span className={style.left}></span></a>
                         </button>
 
                 </> )}
@@ -102,7 +102,7 @@ const CreatedVideogames = () => {
                                 return(
 
                                     <div>
-                                        <button className={style.deleteVg} onClick={() => {handlerDelete(videogame.id)}}><a href="#">X</a></button>
+                                        <button className={style.deleteVg} onClick={() => {handlerDelete(videogame.id)}}>X</button>
                                         <Videogame
 
                                         key={videogame.id}
