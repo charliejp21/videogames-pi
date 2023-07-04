@@ -3,7 +3,7 @@ import {GET_ALL_VIDEOGAMES, GET_VIDEOGAMES_BY_SEARCH, GET_VIDEOGAME_BY_ID, GET_A
 
 export const getAllVideogames = () => async(dispatch) => {
 
-    const apiDataDb = await axios.get("http://localhost:3001/videogames");
+    const apiDataDb = await axios.get("/videogames");
 
     const videogames = apiDataDb.data;
 
@@ -17,7 +17,7 @@ export const getAllVideogames = () => async(dispatch) => {
 
 export const VgBysearch = (nombre) => async(dispatch) => {
 
-    const apiDataDb = await axios.get(`http://localhost:3001/videogames?name=${nombre}`);
+    const apiDataDb = await axios.get(`/videogames?name=${nombre}`);
 
     const videogames = apiDataDb.data;
 
@@ -31,7 +31,7 @@ export const VgBysearch = (nombre) => async(dispatch) => {
 
 export const getVgById = (id) => async(dispatch) => {
 
-    const apiDataDb = await axios.get(`http://localhost:3001/videogames/id/${id}`)
+    const apiDataDb = await axios.get(`/videogames/id/${id}`)
 
     const videogame = apiDataDb.data;
 
@@ -45,7 +45,7 @@ export const getVgById = (id) => async(dispatch) => {
 
 export const getAllGenres = () => async(dispatch) => {
 
-    const apiDataDb = await axios.get(`http://localhost:3001/genres`)
+    const apiDataDb = await axios.get(`/genres`)
 
     const genres = apiDataDb.data;
 
@@ -59,7 +59,7 @@ export const getAllGenres = () => async(dispatch) => {
 
 export const getAllPlataformas = () => async(dispatch) => {
 
-    const apiDataDb = await axios.get(`http://localhost:3001/plataformas`)
+    const apiDataDb = await axios.get(`/plataformas`)
 
     const plataformas = apiDataDb.data;
 
@@ -76,7 +76,7 @@ export const postVg = async(data) => {
     
     try {
 
-        const sendData = await axios.post(`http://localhost:3001/videogames/create`, data)
+        const sendData = await axios.post(`/videogames/create`, data)
 
         alert("Videojuego creado exitosamente")
 
@@ -96,7 +96,7 @@ export const deleteVg = async(id) => {
 
     try {
 
-        const deleteVideoGame = await axios.delete(`http://localhost:3001/videogames/id/${id}`)
+        const deleteVideoGame = await axios.delete(`/videogames/id/${id}`)
 
         alert("Videojuego borrado exitosamente");
 
