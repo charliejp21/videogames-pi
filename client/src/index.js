@@ -9,7 +9,7 @@ import store from './redux/store'
 import axios from 'axios'
 
 //axios.defaults.baseURL = 'https://localhost:3001';
-axios.defaults.baseURL = 'https://vercel.com/charliejp21/videogames-pi/3bTc7vU2go3AW8YrPRjghaCuYtFf';
+axios.defaults.baseURL = 'https://servidor-videogames-gswv.onrender.com/';
 
 ReactDOM.render(
 
